@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="calc.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+    <div class="container">
+     <h1>Giga shitty calculator </h1>
+     
+
+     <br>
+     <br>
+      <div class="test">
+       
+      <input type="text" id="t">
+      <div class="row1">
+       <button onclick="writ(this)">1</button>
+       <button onclick="writ(this)">2</button>
+       <button onclick="writ(this)">3</button>
+       <button onclick="writ(this)">4</button>
+      </div>
+   
+       <div class="row2">
+       <button onclick="writ(this)">5</button>
+       <button onclick='writ(this)'>6</button>
+       <button onclick="writ(this)">7</button>
+       <button onclick="writ(this)">8</button>
+       </div>
+  
+       <div class="row3">
+       <button onclick="writ(this)">9</button>
+       <button onclick="writ(this)">0</button>
+       <button onclick="writ(this)">+</button>
+       <button onclick=writ(this)>-</button>
+
+       </div>
+
+       <div class="row4">
+           <button onclick="writ(this)">*</button>
+           <button onclick="writ(this)">/</button>
+           <button onclick="writ(this)">.</button>
+           <button onclick="equals()">=</button>
+    
+        </div>
+        
+     </div>
+     <h3>How do you write HTML and CSS again?</h2>
+    </div>
+    
+    <style>
+body{
+  
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+        .container{
+          position: relative;
+          top: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  align-items: center;
+  
+    
+
+}
+.test{
+  border-radius: 15px;
+  background-color: rgb(146, 162, 214);
+  position: relative;
+  
+  border: 1px solid black;
+}
+#t{
+  
+  position: relative;
+  right: 2.5px;
+  border-radius: 10px;
+}
+
+button{
+  
+  background: rgb(119, 141, 59);
+  border-radius: 15px;
+  color: black;
+  font-size: x-large;
+  font-weight: bolder;
+    margin: 1px;
+    width: 76px;
+    height: 65px;
+}
+
+#t{
+    margin-left: 5px;
+    
+    width: 19.5rem;
+    height: 2rem;
+}
+button:hover{
+  border-color: white;
+}
+
+    </style>
+    <script>
+      
+    
+ // Example POST method implementation:
+      document.querySelector("#t").addEventListener("keypress",(e)=>{
+        if(e.key=="Enter"){
+          equals()
+        }
+      })
+        function writ(x){
+            document.querySelector("input").value+=x.innerHTML
+        
+        }
+        function equals(){
+            console.log(eval(document.querySelector("input").value))
+            document.querySelector("input").value = eval(document.querySelector("input").value)
+        }
+    </script>
+</body>
+</html>
